@@ -1,11 +1,15 @@
 import React from 'react';
 
+import { Cards, Chart, CountryPicker } from './components'
+
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>My React App</h1>
-      </div>
+      <>
+        <Cards />
+        <CountryPicker />
+        <Chart />
+      </>
     )
   }
 }
