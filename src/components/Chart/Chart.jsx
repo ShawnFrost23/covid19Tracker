@@ -54,11 +54,20 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
         />
       ) : null
   )
-  return (
-    <div className={styles.container}>
-      {country !== 'global' ? barChart : lineChart}
-    </div>
-  );
+
+  if (country === 'global' || !country) {
+    return (
+      <div className={styles.container}>
+        {lineChart}
+      </div>
+    )
+  } else {
+    return (
+      <div className={styles.container}>
+        {barChart}
+      </div>
+    )
+  }
 }
 
 export default Chart;
