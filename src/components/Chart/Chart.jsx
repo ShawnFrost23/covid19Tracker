@@ -11,7 +11,6 @@ const Chart = () => {
     const fetchAPI = async () => {
       setDialyData(await fetchDailyData());
     }
-    console.log(dailyData)
     fetchAPI();
   });
   
